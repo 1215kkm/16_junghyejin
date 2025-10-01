@@ -120,7 +120,7 @@ gsap.timeline({
   .to(".top_red", {
     autoAlpha:0
   })
-  .to(".sign", {
+  .to(".section1 .sign", {
     scale:0,
   }, 'sign')
   .to(".top_box", {
@@ -145,38 +145,39 @@ gsap.timeline({
 
 
 
+// 기존 timeline (point, plus 애니메이션들)
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section2",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    pin:true,
+  }
+})
+.from(".section2 .left", { autoAlpha:0, y:30, ease:'sine.inOut' })
+.from(".section2 .center", { autoAlpha:0, y:30, ease:'sine.inOut' })
+.from(".section2 .right", { autoAlpha:0, y:30, ease:'sine.inOut' })
+.to(".section2 .point_1", {x:-217, ease:'sine.inOut'}, 'p1')
+.to(".section2 .plus1", {rotate:360, ease:'sine.inOut'}, 'p1')
+.to(".section2 .point_2", {x:-300, ease:'sine.inOut'}, 'p2')
+.to(".section2 .plus2", {rotate:360, ease:'sine.inOut'}, 'p2')
+.to(".section2 .point_3", {x:-70, ease:'sine.inOut'}, 'p3')
+.to(".section2 .plus3", {rotate:360, ease:'sine.inOut'}, 'p3')
+.to(".section2 .point_4", {x:-310, ease:'sine.inOut'}, 'p4')
+.to(".section2 .plus4", {rotate:360, ease:'sine.inOut'}, 'p4');
 
-  // section2
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".section2",
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-      pin:true,
-      // markers:true,
-    }
-  }).from(".section2 .left", {
-      autoAlpha:0,
-      y:30,ease:'sine.inOut'
-    }).from(".section2 .center", {
-      autoAlpha:0,
-      y:30,ease:'sine.inOut'
-    }).from(".section2 .right", {
-      autoAlpha:0,
-      y:30,ease:'sine.inOut'
-    })
-    .to(".section2 .point_1", {x:-217,ease:'sine.inOut'}, 'p1')
-    .to(".section2 .plus1", {rotate:360,ease:'sine.inOut'}, 'p1')
-    .to(".section2 .point_2", {x:-300,ease:'sine.inOut'}, 'p2')
-    .to(".section2 .plus2", {rotate:360,ease:'sine.inOut'}, 'p2')
-    .to(".section2 .point_3", {x:-70,ease:'sine.inOut'}, 'p3')
-    .to(".section2 .plus3", {rotate:360,ease:'sine.inOut'}, 'p3')
-    .to(".section2 .point_4", {x:-310,ease:'sine.inOut'}, 'p4')
-    .to(".section2 .plus4", {rotate:360,ease:'sine.inOut'}, 'p4')
-
-
-
+// side-title만 독립 타임라인
+gsap.from(".side-title", {
+  scrollTrigger: {
+    trigger: ".section2",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+  },
+  top: "-200px",
+  ease: "sine.inOut"
+});
 
 
 
@@ -195,7 +196,7 @@ gsap.timeline({
         stagger:0.5,
         scale:0.5,
         duration:10,
-        ease:'back.inOut(3)'
+        ease:'power1.inOut(3)'
       })
       
 
@@ -398,7 +399,7 @@ document.querySelectorAll('.section58').forEach(function(part58){
     pin:true,
     anticipatePin: 1,
     pinSpacing:true,
-    markers:true,
+    // markers:true,
   }
 }).to(part58Round, {
     x:800,
@@ -616,7 +617,7 @@ let tl = gsap.timeline({
     scrub: true,
     pin: true,
     anticipatePin: 1,
-    markers: true
+    // markers: true
   }
 });
 
@@ -651,3 +652,38 @@ tl.to(".section10 .bannerbox .banner", {
   duration: 0.3,
   ease: "power2.inOut"
 }, 0.7); // 70% 지점에서 배너 슬라이드
+
+
+
+
+
+
+  //section11
+  gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section11",
+    start: "top center",
+    end: "bottom center",
+    scrub: true,
+    anticipatePin: 1,
+    // markers:true
+  }
+}).from(".section11 img", {
+  x:'50%',
+  y:'50%',
+  autoAlpha:0,
+  stagger:0.5,
+    ease:'expo.inOut'
+}, 'mobile1')
+
+
+
+gsap.to(".side-title", {
+  scrollTrigger: {
+    trigger: ".section12",
+    start: "top center",      // section12가 화면 중앙에 오면
+    end: "bottom center",     // section12가 화면 중앙을 벗어나면
+    toggleClass: {targets: ".section12", className: "on"},
+    // markers: true   // 디버깅용
+  }
+});

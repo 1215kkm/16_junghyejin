@@ -24,6 +24,23 @@ function checkAllImagesLoaded() {
 
 
 
+// Ctrl + 휠 확대/축소 막기
+window.addEventListener("wheel", function(e) {
+  if (e.ctrlKey) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+// Ctrl + (+, -, 0) 막기
+window.addEventListener("keydown", function(e) {
+  if (e.ctrlKey && (
+      e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+    e.preventDefault();
+  }
+});
+
+
+
 //마우스 따라다니는 원
 const circle = document.querySelector('.circle');
 
@@ -122,7 +139,7 @@ gsap.timeline({
     fontSize:'3rem',
     opacity:0.5
   },'mainText').to(".mainLast", {
-    fontSize:'8rem',
+    fontSize:'7rem',
   },'mainText')
 
 
@@ -233,7 +250,7 @@ gsap.timeline({
 
 
 
-      // section4 좌우효과
+// section4 좌우효과
 // -----------------------------
 // 1) 높이 계산
 // -----------------------------
@@ -260,12 +277,12 @@ let contentAnim = gsap.timeline({
   ease:'expo.inOut'
 }, 'part4')
 .to(".section4 .part4_left", {
-  left:'-70%',
+  left:'-1100px',
   marginTop:'-25%',
   ease:'expo.inOut'
 }, 'part4')
 .to(".section4 .part4_right", {
-  right:'-60%',
+  right:'-900px',
   marginTop:'-30%',
   ease:'expo.inOut'
 }, 'part4')
@@ -305,6 +322,8 @@ let contentAnim = gsap.timeline({
   bottom:0,
   ease:'expo.inOut'
 }, 'part42')
+
+
 // -----------------------------
 // 3) 이미지(li) ↔ 텍스트 박스 매칭
 // -----------------------------
@@ -585,7 +604,6 @@ document.querySelectorAll('.section58').forEach(function(part58){
 //     duration:100,
 //     ease:'linear'
 // }, 'mobile1')
-gsap.registerPlugin(ScrollTrigger);
 
 let hands = gsap.utils.toArray(".section10 .img2 img");
 
@@ -605,7 +623,9 @@ let tl = gsap.timeline({
 // 손 애니메이션은 전체 구간의 일부에서만 진행 (빨리 진행)
 let handDuration = 0.4; // 전체 구간의 40%에서만 손 애니메이션 진행
 let handStartProgress = 0.1; // 10% 지점에서 시작
-
+// 처음에 첫 번째 이미지를 보이게
+hands.forEach(h => h.classList.remove("active"));
+if (hands[0]) hands[0].classList.add("active");
 // 손 애니메이션을 위한 별도 타임라인
 hands.forEach((hand, i) => {
   let progress = handStartProgress + (i / hands.length) * handDuration;

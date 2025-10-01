@@ -127,8 +127,8 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
 /* SECTION (1) */
 .section1 {width: 100%; height: 100vh; margin-top : 0; background: #000; } 
 .section1 video {width: 100%; height: 100%; object-fit: cover;}
-.main_content {margin-left: 100px; margin-top: 100px; font-family: 'GMarketSans'; position: relative;}
-.main .main_content .main_title {font-size: 15rem; display: flex; flex-direction: column; letter-spacing: -0.10em; font-weight: bold; line-height: 1;}
+.main_content {margin-left: 100px; margin-top: 100px; font-family: 'GMarketSans'; position: relative;position: relative; z-index: 2;}
+.main .main_content .main_title {font-size: 15rem; display: flex; flex-direction: column; letter-spacing: -0.10em; font-weight: bold; line-height: 1; }
 .main .main_content .main_title span {}
 .main .main_content .main_tt span {font-size: 5rem; display: flex; flex-direction: column; font-weight: 100; letter-spacing: -0.08em; margin-top: -20px;}
 .main .main_content .main_tt span.last {font-size: 4rem; font-weight: normal; margin-top: 20px;}
@@ -189,9 +189,9 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
 .section3 .note_b .grid-box > div { border-bottom: 1px solid #BE432F; padding: 15px; position: relative; }
 .section3 .note_b .grid-box .profile { grid-row: 1 / 4; border-right: 1px solid #BE432F; padding: 0 0; padding-top: 80px; } 
 
-.section3 .note_b .grid-box .profile .circle {width: 200px; height: 200px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); border-radius: 50%; background: #000; transition: 1s;}
+.section3 .note_b .grid-box .profile .circle {width: 200px; height: 200px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); border-radius: 50%; background: url(../images/na.png) center; transition: 1s; background-size: 300%;}
 .section3 .note_b .grid-box .profile .circle2 {position: absolute; top: 50%; left: 50%; border: 1px solid #BE432F; width: 300px; height: 300px; transform: translate(-50%,-50%); border-radius: 50%; transition: 1s; transition-delay: 0.2s;}
-.section3 .note_b .grid-box .profile.on .circle {width: 340px; height: 340px;}
+.section3 .note_b .grid-box .profile.on .circle {width: 340px; height: 340px; background-size: 100%;}
 .section3 .note_b .grid-box .profile.on .circle2 {width: 440px; height: 440px; }
 
 
@@ -224,10 +224,10 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
 .section4 .content img {width: 400px;}
 .section4 .content li:nth-child(1) {padding-bottom: 200px;}
 
-.section4 .textwrap {position: absolute; width: 100%; height: 100vh; top: 0; font-size: 4rem; color: #fffdf5; z-index: 10;}
+.section4 .textwrap {position: absolute; width: 100%; height: 100vh; top: 0; font-size: 3rem; color: #fffdf5; z-index: 10;}
 .section4 .textbox {position: absolute; width: 20%; height: 300px; top: 0; left: 0;}
-/* .section4 .textbox li {position: absolute;} */
-.section4 .textbox .tt_last {font-size: 2rem;}
+
+.section4 .textbox .tt_last {font-size: 1.6rem;}
 
 .section4 .textwrap .textbox {
     opacity: 0;
@@ -235,6 +235,8 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
     position: absolute;
     top: 0;
     transition: opacity 0.6s ease;
+    width: 100%;
+    height: 100%;
   }
   
   .section4 .textwrap .textbox.on {
@@ -247,6 +249,18 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
     opacity: 0;
   }
   
+  .section4 .textbox li {position: absolute; max-width: 330px ;}
+  .section4 .textbox .typo { width: 250px; top: 30px; left: 30px;}
+  .section4 .textbox .color { top: 650px; left: 30px;}
+  .section4 .textbox .contri { top: 800px; left: 30px; }
+  
+  .section4 .textbox .font {top: 30px; right: 230px}
+  .section4 .textbox .review { top: 170px; right: 230px; }
+  .section4 .textbox .timeline { top: 68%; right: 114px;}
+  .section4 .textbox .target { top: 80%; right: 11px; }
+
+
+
 
 .section4 .svg_box {position: absolute; width: 100%; left: 0; top: 0; }
 .section4 .svg_box .part4_left {position: absolute; left: -10%; top: -1px;}
@@ -265,7 +279,7 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
 .section58_wrap .point_top .point_star3 { left:40px;} 
 .section58_wrap .point_top .point_star4 { left:10px;} 
 .section58_wrap .round { width: 1004px; height: 1004px; border-top-left-radius: 700px; border-top-right-radius: 700px; position: absolute; bottom: 0; left: 118px; transform: translateY(50%); } 
-.section58 .notebook {transform: scale(0.8);}
+.section58 .notebook {transform: scale(0.7);}
 .section58 .notebook .notebook_screen img {position: absolute; left: 0; top: 0;}
 
 /* .line { height: .8px;  background: #C3503C; }  */
@@ -274,12 +288,12 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
 .section5 .point_bottom2 { position: absolute; bottom: 50px; transform: translateY(21px); right: 239px; } 
 .section5 .line1 { position: absolute; top: 50px; } 
 .section5 .line2 { position: absolute; bottom: 50px; }  */
-.section5 .round { background: #8EBBDB;/* width: 1004px;  height: 502px; border-top-left-radius: 700px; border-top-right-radius: 700px; */ /* position: absolute; bottom: 51px; left: 118px; */ } 
+.section5 .round { background: #d9ebf7;/* width: 1004px;  height: 502px; border-top-left-radius: 700px; border-top-right-radius: 700px; */ /* position: absolute; bottom: 51px; left: 118px; */ } 
 .section5 .swim { position: absolute; left: 0; top: 145px; z-index: 1; } 
-.section5 .notebook { position: absolute; bottom: 90px; left: 105px; display: flex; flex-direction: column; } 
+.section58_wrap .notebook { position: absolute; bottom: 90px; left: -50px; display: flex; flex-direction: column; } 
 .section5 .notebook .notebook_screen { position: absolute; top: 12%; left: 11.8%; width: 794px; height: 497px; background: #fff; overflow: hidden; border-radius: 5px; box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); } 
 .section5 .notebook span { font-family: 'SpoqaHanSansNeo-Thin'; display: block; font-size: 4rem; font-weight: 100; letter-spacing: -0.11em; text-align: center; color: #6596ac; } 
-.section5 .textbox { position: absolute; left: 60%; bottom: 105px; } 
+.section58_wrap .textbox { position: absolute; left: 57%; bottom: 105px; } 
 .section5 .textbox ul { display: flex; flex-direction: column; gap: 22px; } 
 .section5 .textbox ul li { display: flex; flex-direction: column; gap: 5px; } 
 .section5 .textbox ul li img { width: 40px; } 
@@ -300,9 +314,9 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
 .section6 .point_bottom2 { position: absolute; bottom: 50px; transform: translateY(21px); right: 239px; } 
 .section6 .line1 { position: absolute; top: 50px; } 
 .section6 .line2 { position: absolute; bottom: 50px; }  */
-.section6 .round { background: #CD7632;/*  width: 1004px; height: 502px; background: #CD7632; border-top-left-radius: 700px; border-top-right-radius: 700px; position: absolute; bottom: 51px; left: 118px; */ } 
+.section6 .round { background: #cfab8f;/*  width: 1004px; height: 502px; background: #CD7632; border-top-left-radius: 700px; border-top-right-radius: 700px; position: absolute; bottom: 51px; left: 118px; */ } 
 .section6 .bread { position: absolute; left: 0; bottom: 35px; z-index: 10; } 
-.section6 .notebook { position: absolute; bottom: 90px; left: 105px; display: flex; flex-direction: column; } 
+.section6 .notebook { position: absolute; bottom: 90px; display: flex; flex-direction: column; } 
 .section6 .notebook span { font-family: 'SpoqaHanSansNeo-Thin'; display: block; font-size: 4rem; font-weight: 100; letter-spacing: -0.11em; text-align: center; color: #CD7632; } 
 .section6 .notebook .notebook_screen { position: absolute; top: 12%; left: 11.8%; width: 794px; height: 497px; background: #fff; overflow: hidden; border-radius: 5px; box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); } 
 .section6 .textbox { position: absolute; left: 60%; bottom: 105px; } 
@@ -327,9 +341,9 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
 .section7 .point_bottom2 { position: absolute; bottom: 50px; transform: translateY(21px); right: 239px; } 
 .section7 .line1 { position: absolute; top: 50px; } 
 .section7 .line2 { position: absolute; bottom: 50px; }  */
-.section7 .round {background: #087CAD; /*  width: 1004px; height: 502px; border-top-left-radius: 700px; border-top-right-radius: 700px; position: absolute; bottom: 51px; left: 118px;  */} 
-.section7 .angel { position: absolute; left: 78px; top: 50px; z-index: 10; } 
-.section7 .notebook { position: absolute; bottom: 90px; left: 105px; display: flex; flex-direction: column; } 
+.section7 .round {background: #88b8cc; /*  width: 1004px; height: 502px; border-top-left-radius: 700px; border-top-right-radius: 700px; position: absolute; bottom: 51px; left: 118px;  */} 
+.section7 .angel { position: absolute; left: -2.5%; top: -35%; z-index: 10; } 
+.section7 .notebook { position: absolute; bottom: 90px; display: flex; flex-direction: column; } 
 .section7 .notebook .notebook_screen { position: absolute; top: 12%; left: 11.8%; width: 794px; height: 497px; background: #fff; overflow: hidden; border-radius: 5px; box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.4); } 
 .section7 .notebook span { font-family: 'SpoqaHanSansNeo-Thin'; display: block; font-size: 4rem; font-weight: 100; letter-spacing: -0.11em; text-align: center; color: #087CAD; } 
 .section7 .textbox { position: absolute; left: 60%; bottom: 105px; } 
@@ -348,17 +362,19 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
 
 /* SECTION (8) */
 .section8 { width: 100%; height: 100vh; position: relative; background: url(../images/section_bg.png) no-repeat center; } 
-.section8 .round {background: #BE432F;/*  width: 1004px; height: 502px;  border-top-left-radius: 700px; border-top-right-radius: 700px; position: absolute; bottom: 51px; left: 118px;  */} 
+.section8 .round {background: #899cda;/*  width: 1004px; height: 502px;  border-top-left-radius: 700px; border-top-right-radius: 700px; position: absolute; bottom: 51px; left: 118px;  */} 
 .section8 .alphbet { width: 90%; position: absolute; top: 10%; } 
 /* .section8 .line1 { position: absolute; top: 50px; } 
 .section8 .line2 { position: absolute; bottom: 50px; } 
 .section8 .point_top { position: absolute; top: 50px; transform: translateY(-25px); left: 164px; } 
 .section8 .point_bottom1 { position: absolute; bottom: 50px; transform: translateY(21px); right: 165px; } 
 .section8 .point_bottom2 { position: absolute; bottom: 50px; transform: translateY(21px); right: 239px; }  */
-.section8 .tab { position: absolute; bottom: 105px; left: 260px; display: flex; flex-direction: column; } 
-.section8 .tab .tab_screen { position: absolute; top: 14%; left: 1.8%; width: 675px; height: 514px; background: #ffffff; overflow: hidden; border-radius: 10px; border: 1px solid #000000; } 
+.section8 .tab { position: absolute; bottom: 105px; left: 30px; display: flex; flex-direction: column; } 
+.section8 .tab .tab_box { transform: scale(0.8);} 
+.section8 .tab .tablet { transform: scale(0.8);} 
+.section8 .tab .tab_screen { position: absolute; top: 14%; left: 12%; width: 675px; height: 514px; background: #ffffff; overflow: hidden; border-radius: 10px; border: 1px solid #000000; } 
 .section8 .tab .tab_screen img { width: 100%; } 
-.section8 .tab img { width: 80%; } 
+/* .section8 .tab img { width: 80%; }  */
 .section8 .tab span { width: 80%; font-family: 'SpoqaHanSansNeo-Thin'; display: block; font-size: 4rem; font-weight: 100; letter-spacing: -0.11em; text-align: center; color: #BE432F; } 
 .section8 .textbox { position: absolute; left: 60%; bottom: 105px; } 
 .section8 .textbox ul { display: flex; flex-direction: column; gap: 22px; } 
@@ -382,7 +398,7 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
 .section9 .page {position: absolute; top: 80px; left: 50%; transform: translateX(-130%); opacity: 70%; z-index: -1; } 
 
 
-.section9 .textbox { position: relative;  border: 1px solid lime} 
+.section9 .textbox { position: relative; } 
 .section9 .textbox ul { display: flex; flex-direction: column; gap: 40px; font-size: 2rem; } 
 .section9 .textbox ul li { display: flex; flex-direction: column; gap: 5px; color: #FFFDF5; font-family: 'SpoqaHanSansNeo-Thin' } 
 .section9 .textbox ul li img { width: 40px; } 
@@ -429,5 +445,5 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
  .screen img { width: 100%; position: absolute; top: 0; left: 0;  } 
 
 
- .section11 {height: 100vh; background: purple; border: 10px solid #000; margin: 0 !important;}
- .section12 {height: 100vh; background:blue; margin: 0;}
+ .section11 {height: 100vh; background: url('../images/bg.jpg'); margin: 0 !important;}
+ .section12 {height: 100vh; margin: 0;}

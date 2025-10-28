@@ -549,7 +549,7 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
   .section3 .note_b .skills {margin-bottom: 100px;}
   .section3 .note_b .grid-box .info {padding-top: 140px;}
   .section3 .note_b .grid-box .certificate > ul > li {grid-template-columns: 45px 1fr;}
-  .section3 .note_b .grid-box .career > ul > li {grid-template-columns: 45px 1fr;}
+  .section3 .note_b .grid-box .career > ul > li {grid-template-columns: 95px 1fr;}
   
   .section4 {width: 100vw; left: -20px; position: relative;}
   .section4 .textwrap .textbox{display: none;}

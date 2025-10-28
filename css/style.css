@@ -535,7 +535,7 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
   .section3 .note_t .textbox span:nth-child(3) {font-size: 2.2rem;}
   .section3 .sect3_bg img {width: 100%;}
   .section3 .img_box {position: absolute; top: 0;}
-  .section3 .note {width: 100%; position: relative; left: 0; transform:translate(0);}
+  .section3 .note {position: relative; left: 0; transform:translate(0);}
   .section3 .note .note_t .img_box ul {flex-wrap: wrap; justify-content: center;}
   .section3 .note .note_t .img_box ul li {width: 40%; border-radius: 10px; }
   .section3 .note_b .grid-box .info ul li {grid-template-columns:1fr;}
@@ -543,6 +543,15 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
   .section3 .note_b .grid-box {grid-template-columns: 1fr;}
   .section3 .note_b .grid-box .profile img {width: 100%;}
   .section3 .note_b .skills {flex-wrap: wrap;}
+  .section3 .note_b .grid-box .profile {border: 0;}
+  .section3 .note_b .grid-box > div {border: 0;}
+  .section3 .note_b .grid-box {border: 0;}
+  .section3 .note_b .skills {margin-bottom: 100px;}
+  .section3 .note_b .grid-box .info {padding-top: 140px;}
+  .section3 .note_b .grid-box .certificate > ul > li {grid-template-columns: 45px 1fr;}
+  .section3 .note_b .grid-box .career > ul > li {grid-template-columns: 45px 1fr;}
+  
+  .section4 {width: 100vw; left: -20px; position: relative;}
   .section4 .textwrap .textbox{display: none;}
   .section4 .textwrap{display: none;}
   .section4 .svg_box{display: none;}
@@ -555,7 +564,7 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
   .section5 .round {display: none;}
   .section58_wrap .textbox {opacity: 1; left: 0; position: relative; bottom: 0; top: 50px;}
   .section6 {height: auto; margin-top: 100px;}
-  .section6 .bread {bottom: auto; top: 300px;;}
+  .section6 .bread {bottom: auto; top: 300px; left: -140px;;}
   .section6 .round {display: none;}
   .section6 .notebook .notebook_screen {left: 0; width: 100%;}
   .section7 {height: auto; margin-top: 100px;}

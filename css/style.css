@@ -522,7 +522,7 @@ span.circle { position: fixed; top: 0; left: 0; width: 30px; height: 30px; borde
   .top_red {display: none;}
   .text_portfolio {display: none;}
   .text_portfolio svg {display: none;}
-  .section1 .sign {top: 20%;}
+  .section1 .sign {top: 50%;}
   .section1 {width: 100vw; position: relative;left: -20px;}
   .section1 .main {display: none;}
   .section2 {}
